@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+:root {
+  --primarycolor: hsl(94, 59%, 34%);
+  --hovercolor: #bdf094;
+  --palegreen: hsl(96,75%, 89%);
+  --whitecolor: hsl(0,0%, 100%);
+  --blackcolor: hsl(0,0%,18%);
+  --testcolor: hsl(240, 1%, 48%);
+  --bgcolor: hsl(228,10%, 94%);
+  --greytext: rgb(190,192,190);
+  --inputcolor: hsl(330,12%,97%);
+  --main-color: #0FC98C;
+  --main-color-dark: #66D9B1;
+  --ray-color: #A9E8D1;
+  --back-color: #111111;
+  /* fondo y botones */
+  --spark-color: #0BA675;
+  --fondo-color: #16665d;
+  --color-blaco: #ffff;
+
+  --titulos-color: #20496a;
+  --degradado:  linear-gradient(-45deg, rgba(11,166,117,1) 0%, rgba(22,102,93,1) 100%);
+}
+
+#back {
+  background-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', serif;
+  font-display: swap;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Para Internet Explorer y Edge */
+  scrollbar-width: none;  /* Para Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Para Chrome, Safari y Opera */
+}
+
+/* body {
+  background: var(--back-color);
+} */
+
+button{
+  border: none;
+}
+
+article {
+  margin: 40px 10px;
+}
+
+main {
+  transition: 0.8s;
+  background: var(--fondo-color);
+}
+
+main section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: 0.8s;
+}
+
+main section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+main section .personaje {
+  top: 38%;
+  left: 26%;
+  object-fit: contain;
+}
+
+main section .texto {
+  margin-left: 20px;
+}
+
+main section #text {
+  position: relative;
+  color: #fff;
+  font-size: 8vw;
+}
+
+main section #text2 {
+  position: relative;
+  color: #fff;
+  font-size: 1.5vw;
+}
+
+/*loading*/
+#lastray {
+  margin: auto;
+  border-radius: 100%;
+  border: 0px solid;
+  border-color: var(--ray-color);
+  opacity: 1;
+  width: 0px;
+  height: 0px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+#loading-page {
+  background: var(--back-color);
+  border-radius: 100%;
+  top: 50%;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  width: 400vh;
+  height: 400vh;
+  position: fixed;
+  overflow: hidden;
+  transition-duration: 1s;
+  z-index: 1000;
+}
+
+#loader {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  position: absolute;
+  max-height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.element {
+  margin: auto;
+  position: absolute;
+}
+
+.sphere {
+  background: radial-gradient(circle, var(--main-color), var(--main-color-dark));
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  animation: pump 4s infinite ease-in-out;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  box-shadow: 0px 0px 15px 0px rgba(200, 230, 255, 0.5);
+}
+
+.ray {
+  margin: auto;
+  border-radius: 100%;
+  border: 5px solid;
+  border-color: var(--ray-color);
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  animation: ray 4s infinite ease-out;
+  animation-delay: 2.5s;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  box-shadow: 0px 0px 15px 0px rgba(255, 230, 200, 0.5);
+}
+
+.spark {
+  width: 200px;
+  height: 200px;
+}
+
+.particles {
+  transform: translate(-50%, -50%);
+}
+
+.particle {
+  background-color: var(--spark-color);
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  opacity: 0;
+  animation: particle 1s infinite ease-in;
+  left: 0%;
+  top: 0%;
+}
+
+.spark1 {
+  transform: rotate(20deg);
+}
+
+.spark2 {
+  transform: rotate(40deg);
+}
+
+.spark3 {
+  transform: rotate(66deg);
+}
+
+.spark4 {
+  transform: rotate(172deg);
+}
+
+.spark5 {
+  transform: rotate(110deg);
+}
+
+.spark6 {
+  transform: rotate(130deg);
+}
+
+.spark7 {
+  transform: rotate(-100deg);
+}
+
+.spark8 {
+  transform: rotate(-50deg);
+}
+
+.spark9 {
+  transform: rotate(-80deg);
+}
+
+.spark10 {
+  transform: rotate(-173deg);
+}
+
+.spark11 {
+  transform: rotate(-7deg);
+}
+
+.spark12 {
+  transform: rotate(-133deg);
+}
+
+.particle1 {
+  animation-delay: 0.5s;
+}
+
+.particle2 {
+  animation-delay: 0s;
+}
+
+.particle3 {
+  animation-delay: 2.2s;
+}
+
+.particle4 {
+  animation-delay: 0.2s;
+}
+
+.particle5 {
+  animation-delay: 2s;
+}
+
+.particle6 {
+  animation-delay: 1.2s;
+}
+
+.particle7 {
+  animation-delay: 2.5s;
+}
+
+.particle8 {
+  animation-delay: 1.5s;
+}
+
+.particle9 {
+  animation-delay: 1s;
+}
+
+.particle10 {
+  animation-delay: 2.5s;
+}
+
+.particle11 {
+  animation-delay: 0.7s;
+}
+
+.particle12 {
+  animation-delay: 1.7s;
+}
+
+.loaded {
+  width: 0px !important;
+  height: 0px !important;
+  transition: 1.2s ease-out;
+}
+
+.whitebk {
+  background: #fff !important;
+}
+
+.opzero {
+  opacity: 0;
+  transition: 1s ease-out;
+}
+
+.finalray {
+  animation: ray 2s ease-out;
+  animation-delay: 0.3s;
+  border: 1px solid;
+}
+
+/*ANIMATIONS*/
+@keyframes pump {
+  0% {
+    width: 50px;
+    height: 50px;
+  }
+  83% {
+    width: 88px;
+    height: 88px;
+  }
+  85% {
+    width: 90px;
+    height: 90px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@keyframes ray {
+  0% {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    border-width: 1px;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    border-width: 5px;
+  }
+}
+
+@keyframes particle {
+  0% {
+    left: 0%;
+    top: 0%;
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    left: 50%;
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.float-image {
+  height: 500px;
+}
+
+.oculto {
+  display: none;
+}
+
+.centar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.separacion {
+  min-height: 500px;
+  margin: 200px 50px;
+}
+
+hr.stylish-line {
+  border: none;
+  height: 2px;
+  background-color: var(--titulos-color);
+  margin: 20px 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (width > 1000px){
+  #fondoIMG {
+    background-image: url("/public/img/fondo3-min.webp");
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (width < 1000px){
+  #fondoIMG {
+    background-color: var(--fondo-color);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  main section #text {
+    font-size: 10vw;
+  }
+
+  main section #text2 {
+    font-size: 2vw;
+  }
+
+  .separacion {
+    margin: 150px 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  main section #text {
+    font-size: 12vw;
+  }
+
+  main section #text2 {
+    font-size: 2.5vw;
+  }
+
+  .separacion {
+    margin: 100px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  main section #text {
+    font-size: 14vw;
+  }
+
+  main section #text2 {
+    font-size: 3vw;
+  }
+
+  main section .personaje {
+    top: 30%;
+    left: 20%;
+  }
+
+  main section .texto {
+    margin-left: 10px;
+  }
+
+  .separacion {
+    margin: 50px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  main section #text {
+    font-size: 16vw;
+  }
+
+  main section #text2 {
+    font-size: 4vw;
+  }
+
+  main section .personaje {
+    top: 20%;
+    left: 10%;
+  }
+
+  .separacion {
+    margin: 20px 10px;
+  }
+}
+
+@media (max-width: 800px ){
+  #loading-page{
+    top: 50%;
+  }
+}
+
+
+
+/*botton de Curse card*/
+/* From Uiverse.io by Peary74 */ 
+.CourseCard_button {
+  font-family: inherit;
+  font-size: 20px;
+  background: var(--fondo-color);
+  color: white;
+  fill: rgb(155, 153, 153);
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  font-weight: 1000;
+}
+
+.CourseCard_span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.CourseCard_svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.CourseCard_button:hover {
+  background: var(--fondo-color);
+}
+
+.CourseCard_button:hover .svg-wrapper {
+  transform: scale(1.25);
+  transition: 0.5s linear;
+}
+
+.CourseCard_button:hover .CourseCard_svg {
+  transform: translateX(2.5em) scale(1.1);
+  fill: #fff;
+}
+
+.CourseCard_button:hover .CourseCard_span {
+  opacity: 0;
+  transition: 0.5s linear;
+}
+
+.CourseCard_button:active {
+  transform: scale(0.95);
+}

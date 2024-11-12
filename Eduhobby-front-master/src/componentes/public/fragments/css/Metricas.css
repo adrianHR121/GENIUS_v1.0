@@ -1,0 +1,23 @@
+.metricas-container {
+    background-color: var(--spark-color);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.metrica {
+    flex: 1;
+    padding: 1rem;
+}
+
+.numero {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.descripcion {
+    font-size: 1.25rem;
+}

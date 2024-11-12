@@ -1,0 +1,18 @@
+name: trigger-sync
+
+on:
+  push:
+    branches: master
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy Stage
+      uses: fjogeleit/http-request-action@v1
+      with:
+        url: 'https://api.github.com/repos/DosDeCarnitas1/Eduhobby-back/actions/workflows/auto-sync-fork.yml/dispatches'
+        method: 'POST'
+        customHeaders: '{ "Authorization": "Bearer ${{ secrets.ACCESS_TOKEN }}", "Content-Type": "application/json", "Accept": "application/vnd.github.v3+json" }'
+        data: '{ "ref": "master" }'

@@ -1,0 +1,140 @@
+/* Contenedor principal */
+.precios-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #16665d;
+    margin-top: -300px;
+    margin-bottom: -280px;
+}
+
+/* Fondo de las tarjetas */
+.cards-background {
+    background-color: #ffffff; /* Color del contenedor de las tarjetas */
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra del contenedor */
+    max-width: 100%; /* Máxima anchura del contenedor */
+    width: 100%;
+    margin: 20rem 0;
+}
+
+/* Título y subtítulo */
+.precios-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.precios-title {
+    color: #16665d;
+    font-size: 2.25rem; /* Tamaño de fuente para h1 */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.precios-subtitle {
+    color: #16665d;
+    font-size: 1.25rem; /* Tamaño de fuente para p */
+}
+
+/* Contenedor de las tarjetas */
+/* .cards-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    max-width: 90rem;
+    width: 100%;
+    padding-left: 15rem;
+    margin-right: 50rem;
+} */
+
+/* Estilo para las tarjetas */
+.card {
+    width: 100%;
+    max-width: 30rem; /* Aumenta el max-width de las tarjetas */
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.highlighted-card {
+    position: relative;
+    border: 2px solid #0BA675;
+}
+
+.highlight-label {
+    position: absolute;
+    top: -1.5rem;
+    background-color: #0BA675;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* Ocupa toda la altura de la tarjeta */
+    justify-content: center; /* Centra el contenido verticalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+.card-title {
+    color: #4a4a4a;
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.card-price {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.card-sub-price {
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.card-description {
+    color: #6b6b6b;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Estilo para los botones */
+.animated-button {
+    background-color: #16665d; /* Color inicial */
+    color: #ffffff; /* Color del texto inicial */
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.animated-button:hover {
+    background-color: #0BA675; /* Color al pasar el ratón */
+    color: #000000; /* Color del texto al pasar el ratón */
+}
+
+.animated-button:focus {
+    outline: none;
+}

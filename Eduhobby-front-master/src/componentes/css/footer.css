@@ -1,0 +1,122 @@
+footer {
+    width: 100%;
+    padding: 50px 0px;
+    background-size: cover;
+    background-color: var(--main-color);
+    mask-size: cover;
+}
+
+.container__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.box__footer {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.box__footer .logo img {
+    width: 50px; 
+}
+
+.box__footer .terms {
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: var(--color-blaco);
+    font-size: 18px;
+}
+
+.box__footer .som {
+    font-size: 25px;
+    margin-bottom: 30px;
+    margin-top: -25px;
+    color: #343434;
+}
+
+.box__footer .suscribe {
+    background-color: #16665d; /* Color inicial */
+    color: #ffffff; /* Color del texto inicial */
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.suscribe:focus{
+    outline: none;
+}
+
+.suscribe:hover {
+    color: var(--back-color);
+    background-color: var(--spark-color);
+}
+
+.box__footer h2 {
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+}
+
+.box__footer a {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: var(--color-blaco);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.box__footer a:hover {
+    opacity: 0.8;
+}
+
+.box__footer a .fab,
+.box__footer a .social-icon {
+    width: 33px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.box__copyright {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p {
+    margin-top: 20px;
+    color: var(--color-blaco);
+}
+
+.box__copyright hr {
+    border: none;
+    height: 1px;
+    background-color: var(--color-blaco);
+}
+
+/* .link-button {
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    font: inherit;
+    padding: 0;
+    margin: 0;
+} */

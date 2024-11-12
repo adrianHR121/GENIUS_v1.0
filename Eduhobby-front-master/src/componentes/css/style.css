@@ -1,0 +1,40 @@
+.bottom-info i{
+    padding: 10px;
+}
+.fondo-ave{
+    position: absolute;
+    right: 0;
+    width: 850px;
+    height: 550px;
+    display: block;
+    top: 10%;
+}
+
+
+
+/* Mensaje Maestro */
+.regresarHome:hover {
+    width: 140px;
+    border-radius: 50px;
+    background-color: var(--main-color);
+    align-items: center;
+}
+
+.regresarHome:hover .svgIcon {
+    transform: translateY(-200%);
+}
+
+.regresarHome::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: white;
+    font-size: 0px;
+    transition: all 0.3s;
+}
+
+.regresarHome:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+}

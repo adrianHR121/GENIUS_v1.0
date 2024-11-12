@@ -1,0 +1,153 @@
+.conte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background-color: rgba(255, 255, 255, 0.336);
+  position: fixed;
+  top: 0;
+  border-radius: 20px;
+  margin: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10; 
+}
+
+.menu-rapido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.menu-rapido ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+.menu-rapido li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-rapido li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu-rapido li a:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+.scrolled {
+  background-color: #ffff;
+}
+
+@media (min-width: 1000px) {
+  .login {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 10px;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .menu-button {
+    display: none;
+  }
+}
+
+@media (max-width: 999px) {
+  .parent {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 1rem;
+    width: 90%;
+  }
+
+  .menu-rapido ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-rapido ul li {
+    width: 100%;
+  }
+}
+
+.mobile-menu {
+  top: 60px;
+  left: 0;
+  right: 0;
+}
+
+.menu-button {
+  display: flex;
+}
+
+.btn {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: var(--fondo-color);
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background-color: var(--fondo-color);
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  color: #fff;
+  transition-delay: 0.5s;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: var(--fondo-color);
+  transition: 0.4s ease;
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}

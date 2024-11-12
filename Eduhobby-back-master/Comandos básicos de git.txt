@@ -1,0 +1,103 @@
+Comandos básicos de git
+
+1.- Inicializar un repositorio Git: git init (Inicia un nuevo repositorio de Git en el directorio actual)
+
+2.- Clonar un repositorio existente: git clone <url-del-repositorio>
+(Clona un repositorio existente desde una URL a tu máquina local.)
+
+3.- Añadir archivos al área de preparación (staging area): git add <archivo-o-directorio> / git add .
+(Agrega un archivo específico o todos los archivos modificados al área de preparación.)
+
+4.- Confirmar cambios (commit): git commit -m "Mensaje descriptivo del commit"
+(Crea un commit con los cambios que se encuentran en el área de preparación.)
+
+5.- Verificar el estado del repositorio: git status
+(Muestra el estado de los archivos en el directorio de trabajo y el área de preparación.)
+
+6.- Ver historial de commits: git log
+(Muestra el historial de commits del repositorio.)
+
+7.- Actualizar el repositorio local con cambios del repositorio remoto: git pull
+(Actualiza el repositorio local con los últimos cambios del repositorio remoto.)
+
+8.- Enviar cambios al repositorio remoto: git push
+(Sube los cambios confirmados al repositorio remoto.)
+
+9.- Crear una nueva rama: git branch <nombre-de-la-rama>
+(Crea una nueva rama en el repositorio.)
+
+10.- Cambiar a una rama diferente: git checkout <nombre-de-la-rama>
+()
+
+11.- Crear y cambiar a una nueva rama: git checkout -b <nombre-de-la-rama>
+(Crea una nueva rama y cambia a ella inmediatamente.) 
+
+12.- Fusionar cambios de una rama en la rama actual: git merge <nombre-de-la-rama>
+(Fusiona los cambios de la rama especificada en la rama actual.)
+
+13.- Ver ramas existentes: git branch
+(Lista todas las ramas en el repositorio, indicando en cuál te encuentras actualmente.)
+
+14.- Eliminar una rama: git branch -d <nombre-de-la-rama>
+(Elimina una rama local (siempre y cuando haya sido fusionada con la rama actual).)
+
+15.- Restablecer cambios en un archivo específico: git checkout -- <archivo>
+(Revierte los cambios en un archivo específico al estado del último commit.)
+
+16.- Eliminar archivos del área de preparación: git reset <archivo>
+(Elimina un archivo del área de preparación, manteniéndolo en el directorio de trabajo.)
+
+17.- Eliminar cambios no confirmados (hard reset): git reset --hard <commit>
+(Revierte el directorio de trabajo y el área de preparación al estado de un commit específico, eliminando todos los cambios posteriores.)
+
+18.- Ver diferencias entre commits o entre el área de trabajo y el área de preparación: git diff
+(Muestra las diferencias entre el directorio de trabajo y el área de preparación.)
+
+19.- Ver diferencias entre el área de preparación y el último commit: git diff --staged
+(Muestra las diferencias entre el área de preparación y el último commit.)
+
+20.- Renombrar un archivo: git mv <archivo-viejo> <archivo-nuevo>
+(Renombra un archivo y lo agrega al área de preparación.)
+
+21.- Eliminar un archivo: git rm <archivo>
+(Elimina un archivo del directorio de trabajo y lo agrega al área de preparación.)
+
+22.- Ver información de un commit específico: git show <commit>
+(Muestra información detallada sobre un commit específico.)
+
+23.- Ver resumen de la historia del repositorio: git log --oneline
+(Muestra el historial de commits en una sola línea por commit, facilitando la lectura.)
+
+24.- Configurar nombre de usuario: git config --global user.name "Tu Nombre"
+(Configura el nombre de usuario que se asociará con tus commits.)
+
+25.- Configurar correo electrónico: git config --global user.email "tu-email@ejemplo.com"
+(Configura el correo electrónico que se asociará con tus commits.)
+
+26.- Listar configuraciones actuales: git config --list
+(Muestra todas las configuraciones actuales de Git.)
+
+27.- Ignorar archivos específicos: echo "archivo-o-directorio" >> .gitignore
+git add .gitignore
+(Agrega archivos o directorios a un archivo .gitignore para que Git los ignore en futuros commits.)
+
+28.- Eliminar archivos del repositorio pero mantenerlos en el directorio de trabajo: git rm --cached <archivo>
+(Elimina un archivo del área de preparación pero lo mantiene en el directorio de trabajo.)
+
+29.- Ver commits de una rama específica: git log <nombre-de-la-rama>
+(Muestra el historial de commits de una rama específica.)
+
+30.- Stash (guardar cambios temporalmente): git stash
+(Guarda temporalmente los cambios no confirmados en el área de trabajo para limpiarlo sin perder trabajo.)
+
+31.- Aplicar stash guardado: git stash apply
+(Aplica los cambios guardados en el stash de vuelta al área de trabajo.)
+
+32.- Listar stashes guardados: git stash list
+(Muestra una lista de todos los stashes guardados.)
+
+33.- Eliminar un stash específico: git stash drop <stash@{n}>
+(Elimina un stash específico de la lista de stashes guardados.)
+
+34.- Eliminar todos los stashes: git stash clear
+(Elimina todos los stashes guardados.)
